@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: io.shardingsphere:sharding-core:3.0.0.M1-ML">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/meiliRespository/io/shardingsphere/sharding-core/3.0.0.M1-ML/sharding-core-3.0.0.M1-ML.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/meiliRespository/io/shardingsphere/sharding-core/3.0.0.M1-ML/sharding-core-3.0.0.M1-ML-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/meiliRespository/io/shardingsphere/sharding-core/3.0.0.M1-ML/sharding-core-3.0.0.M1-ML-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
