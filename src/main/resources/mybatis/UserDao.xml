@@ -18,4 +18,8 @@
             WHERE id = #{item.id}
         </foreach>
     </update>
+
+    <update id="updateUser" parameterType="io.shardingsphere.sharding.unit.model.User">
+        update user set age = #{age} where id = #{id}
+    </update>
 </mapper>

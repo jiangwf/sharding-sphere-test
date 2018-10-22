@@ -10,4 +10,6 @@ import java.util.List;
 public interface UserDao extends UserMapper {
 
     void updateUserList(List<User> userList);
+
+    void updateUser(User user);
 }

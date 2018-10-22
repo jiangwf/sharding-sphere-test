@@ -5,6 +5,7 @@ import io.shardingsphere.sharding.unit.dao.UserDao;
 import io.shardingsphere.sharding.unit.model.User;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.annotation.Rollback;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -41,5 +42,20 @@ public class UserDaoTest extends AppTest{
         user1.setAge(20L);
         userList.add(user1);
         userDao.updateUserList(userList);
+    }
+
+    @Test
+    @Rollback(value = false)
+    public void testUser(){
+        User user = new User();
+        user.setId(20L);
+        user.setAge(20L);
+        userDao.updateUser(user);
+    }
+
+    @Test
+    @Rollback(value = false)
+    public void selectUser(){
+        userDao.selectByExample(null);
     }
 }
