@@ -1,5 +1,6 @@
 package io.shardingsphere.sharding.test.dao;
 
+import io.shardingsphere.core.util.DateUtil;
 import io.shardingsphere.sharding.test.AppTest;
 import io.shardingsphere.sharding.unit.dao.UserDao;
 import io.shardingsphere.sharding.unit.model.User;
@@ -7,6 +8,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.annotation.Rollback;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -57,5 +59,11 @@ public class UserDaoTest extends AppTest{
     @Rollback(value = false)
     public void selectUser(){
         userDao.selectByExample(null);
+    }
+
+    @Test
+    public void testMonthList(){
+        List<String> monthListFromStartToNow = DateUtil.getMonthListFromStartToNow("201809", new SimpleDateFormat("yyyyMM").format(new Date()));
+        System.out.println("==============="+monthListFromStartToNow);
     }
 }
